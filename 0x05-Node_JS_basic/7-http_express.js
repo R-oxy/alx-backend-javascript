@@ -11,10 +11,10 @@ app.get('/', (req, res) => {
 app.get('/students', async (req, res) => {
   try {
     const data = await students(process.argv[2]);
-    res.send(`This is the list of our students\n` +
-             `Number of students: ${data.students.length}\n` +
-             `Number of students in CS: ${data.csStudents.length}. List: ${data.csStudents.join(', ')}\n` +
-             `Number of students in SWE: ${data.sweStudents.length}. List: ${data.sweStudents.join(', ')}`);
+    res.send('This is the list of our students\n' +
+             'Number of students: ' + data.students.length + '\n' +
+             'Number of students in CS: ' + data.csStudents.length + '. List: ' + data.csStudents.join(', ') + '\n' +
+             'Number of students in SWE: ' + data.sweStudents.length + '. List: ' + data.sweStudents.join(', '));
   } catch (err) {
     res.status(500).send(err.message);
   }
@@ -25,4 +25,3 @@ app.listen(port, () => {
 });
 
 module.exports = app;
-
