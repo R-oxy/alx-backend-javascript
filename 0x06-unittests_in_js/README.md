@@ -1,8 +1,4 @@
----
-
 **0x06. Unittests in JS**
-
----
 
 **Resources**  
 Read or watch:
