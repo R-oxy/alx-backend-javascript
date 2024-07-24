@@ -16,7 +16,7 @@ async function countStudents(path) {
       lastName: student[1],
       age: student[2],
       field: student[3],
-  }));
+    }));
 
   const csStudents = students
     .filter((student) => student.field === 'CS')
@@ -28,7 +28,7 @@ async function countStudents(path) {
 
   console.log(`Number of students: ${students.length}`);
   console.log(`Number of students in CS: ${csStudents.length}. List: ${csStudents.join(', ')}`);
-  console.log(`Number of students in SWE: ${sweStudents.length}. List: ${sweStudents.join(', ')}`); 
+  console.log(`Number of students in SWE: ${sweStudents.length}. List: ${sweStudents.join(', ')}`);
   return { students, csStudents, sweStudents };
 }
 
